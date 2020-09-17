@@ -41,16 +41,23 @@ final EditText text = (EditText) root.findViewById(R.id.nametxt);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                HomeFragment homeFragment = new HomeFragment();
-                Bundle bundle = new Bundle();
-                bundle.putString("name",text.getText().toString());
-                bundle.putString("rollno",text1.getText().toString());
-                bundle.putString("description",text2.getText().toString());
 
-                String nam = bundle.getString("name");
-                Toast.makeText(getContext(), nam, Toast.LENGTH_SHORT).show();
+
+                HomeFragment homeFragment = new HomeFragment();
+
+
+                Bundle bundle = new Bundle();
+                bundle.putString("name", ""+text.getText());
+                bundle.putString("rollno", ""+text1.getText());
+                bundle.putString("dsc", ""+text2.getText());
                 homeFragment.setArguments(bundle);
-//FragmentManager manager = FragmentManager();
+
+
+                getFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.nav_host_fragment, homeFragment)
+                        .commit();
+
 
 
             }

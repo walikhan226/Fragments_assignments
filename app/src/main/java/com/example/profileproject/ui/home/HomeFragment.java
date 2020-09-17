@@ -2,6 +2,7 @@ package com.example.profileproject.ui.home;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,7 +18,7 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.example.profileproject.R;
 
-public class HomeFragment extends Fragment {
+public  class HomeFragment extends Fragment {
 
 
  public    HomeFragment(){
@@ -27,6 +28,18 @@ public class HomeFragment extends Fragment {
     @Override
     public void startActivity(Intent intent) {
         super.startActivity(intent);
+    }
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+
+
+        super.onCreate(savedInstanceState);
+
+
+
+
+
     }
 
 
@@ -39,24 +52,6 @@ public class HomeFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
 
 
-        Bundle bundle = getArguments();
-
-        if(bundle!=null){
-
-
-
-            String name =bundle.getString("name");
-            String rollno =bundle.getString("rollno");
-            String description =bundle.getString("description");
-            String nam = bundle.getString("name");
-            Toast.makeText(getContext(), nam, Toast.LENGTH_SHORT).show();
-
-
-
-
-
-        }
-
 
 
         View root = inflater.inflate(R.layout.fragment_home, container, false);
@@ -65,7 +60,24 @@ public class HomeFragment extends Fragment {
         final   TextView text2 = (TextView) root.findViewById(R.id.descriptiondisplay);
 
 
+        Log.d("myTag", "myname");
+        Bundle bundle;
+        bundle = getArguments();
+        if (bundle != null) {
 
+
+            text.setText(bundle.getString("name"));
+            text1.setText(bundle.getString("rollno"));
+            text2.setText(bundle.getString("dsc"));
+
+
+
+        }else {
+
+            Toast.makeText(getActivity(), "Null",
+                    Toast.LENGTH_LONG).show();
+
+        }
 
 
 
