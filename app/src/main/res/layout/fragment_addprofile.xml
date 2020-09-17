@@ -7,7 +7,7 @@
     android:background="#D83E3E"
     android:clipToPadding="true"
     android:paddingTop="20sp"
-    tools:context=".ui.gallery.GalleryFragment">
+    tools:context=".ui.gallery.AddprofileFragment">
 
     <ScrollView
         android:id="@+id/first"

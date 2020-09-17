@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#D83E3E"
-    tools:context=".ui.slideshow.SlideshowFragment">
+    tools:context=".ui.slideshow.ProjectFragment">
 
     <LinearLayout
         android:id="@+id/linearLayout"

@@ -6,20 +6,20 @@
     app:startDestination="@id/nav_gallery">
     <fragment
         android:id="@+id/nav_gallery"
-        android:name="com.example.profileproject.ui.gallery.GalleryFragment"
+        android:name="com.example.profileproject.ui.gallery.AddprofileFragment"
         android:label="Add Profile"
-        tools:layout="@layout/fragment_gallery" />
+        tools:layout="@layout/fragment_addprofile" />
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.example.profileproject.ui.home.HomeFragment"
+        android:name="com.example.profileproject.ui.home.ProfileFragment"
         android:label="Profile"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_profile" />
 
 
 
     <fragment
         android:id="@+id/nav_slideshow"
-        android:name="com.example.profileproject.ui.slideshow.SlideshowFragment"
+        android:name="com.example.profileproject.ui.slideshow.ProjectFragment"
         android:label="Projects"
-        tools:layout="@layout/fragment_slideshow" />
+        tools:layout="@layout/fragment_project" />
 </navigation>

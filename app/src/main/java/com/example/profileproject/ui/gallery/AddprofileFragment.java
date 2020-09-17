@@ -6,31 +6,25 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentActivity;
-import androidx.fragment.app.FragmentManager;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
 
 import com.example.profileproject.R;
-import com.example.profileproject.ui.home.HomeFragment;
+import com.example.profileproject.ui.home.ProfileFragment;
 
-public class GalleryFragment extends Fragment {
+public class AddprofileFragment extends Fragment {
 
 
 
-  public   GalleryFragment(){
+  public AddprofileFragment(){
 
     }
 
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        View root = inflater.inflate(R.layout.fragment_gallery, container, false);
+        View root = inflater.inflate(R.layout.fragment_addprofile, container, false);
 
 final EditText text = (EditText) root.findViewById(R.id.nametxt);
     final    EditText text1 = (EditText) root.findViewById(R.id.rollnotxt);
@@ -43,7 +37,7 @@ final EditText text = (EditText) root.findViewById(R.id.nametxt);
             public void onClick(View v) {
 
 
-                HomeFragment homeFragment = new HomeFragment();
+                ProfileFragment homeFragment = new ProfileFragment();
 
 
                 Bundle bundle = new Bundle();
