@@ -68,25 +68,24 @@
                 android:inputType="textPersonName"
                 android:textColor="#FFF8F8" />
 
-            <ImageView
-                android:id="@+id/imageView3"
-                android:layout_width="match_parent"
-                android:layout_height="211dp"
-                android:paddingTop="20sp"
-                android:paddingBottom="20sp"
-                tools:src="@tools:sample/avatars" />
 
-            <Button
-                android:id="@+id/button"
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Select from gallery" />
 
-            <Button
-                android:id="@+id/button2"
+                android:layout_height="172dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="70dp"
+                android:src="@mipmap/ic_launcher_round"
+                app:civ_border_width="2dp" />
+
+            <TextView
+                android:id="@+id/textView4"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Select from Camera" />
+                android:layout_height="37dp"
+                android:gravity="center"
+                android:text="Tap on image to select image"
+                android:textColor="#F4F4F4" />
 
             <Button
                 android:id="@+id/addprofile"
