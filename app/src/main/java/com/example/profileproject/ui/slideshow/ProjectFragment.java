@@ -15,20 +15,14 @@ import com.example.profileproject.R;
 
 public class ProjectFragment extends Fragment {
 
-    private SlideshowViewModel slideshowViewModel;
+
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        slideshowViewModel =
-                ViewModelProviders.of(this).get(SlideshowViewModel.class);
+
         View root = inflater.inflate(R.layout.fragment_project, container, false);
 
-        slideshowViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
 
-            }
-        });
         return root;
     }
 }

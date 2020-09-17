@@ -22,6 +22,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import com.karumi.dexter.Dexter;
 import com.karumi.dexter.PermissionToken;
@@ -36,10 +37,6 @@ import static android.app.Activity.RESULT_OK;
 
 
 public class AddprofileFragment extends Fragment {
-
-
-
-
 
 
     CircleImageView image;
@@ -96,21 +93,34 @@ final EditText text = (EditText) root.findViewById(R.id.nametxt);
             public void onClick(View v) {
 
 
-                ProfileFragment homeFragment = new ProfileFragment();
+
+                try {
+
+                    ProfileFragment homeFragment = new ProfileFragment();
 
 
-                Bundle bundle = new Bundle();
-                bundle.putString("name", ""+text.getText());
-                bundle.putString("rollno", ""+text1.getText());
-                bundle.putString("dsc", ""+text2.getText());
-          bundle.putString("uri",imageUri.toString());
-                homeFragment.setArguments(bundle);
 
 
-                getFragmentManager()
-                        .beginTransaction()
-                        .replace(R.id.nav_host_fragment, homeFragment)
-                        .commit();
+                    Bundle bundle = new Bundle();
+                    bundle.putString("name", ""+text.getText());
+                    bundle.putString("rollno", ""+text1.getText());
+                    bundle.putString("dsc", ""+text2.getText());
+                    bundle.putString("uri",imageUri.toString());
+                    homeFragment.setArguments(bundle);
+
+
+                    getFragmentManager()
+                            .beginTransaction()
+                            .replace(R.id.nav_host_fragment, homeFragment)
+                            .commit();
+
+
+                }catch (Exception ex){
+                    Toast.makeText(getActivity(), "Some fields are missing",
+                            Toast.LENGTH_LONG).show();
+
+
+                }
 
 
 

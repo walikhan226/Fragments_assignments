@@ -39,7 +39,7 @@ public  class ProfileFragment extends Fragment {
     }
 
 
-    private HomeViewModel homeViewModel;
+
 
 
 
@@ -56,6 +56,9 @@ public  class ProfileFragment extends Fragment {
         final   TextView text2 = (TextView) root.findViewById(R.id.descriptiondisplay);
     final CircleImageView image = root.findViewById(R.id.img1);
 
+
+
+
         Log.d("myTag", "myname");
         Bundle bundle;
         bundle = getArguments();
@@ -70,7 +73,7 @@ public  class ProfileFragment extends Fragment {
 
         }else {
 
-            Toast.makeText(getActivity(), "Null",
+            Toast.makeText(getActivity(), "No data",
                     Toast.LENGTH_LONG).show();
 
         }
